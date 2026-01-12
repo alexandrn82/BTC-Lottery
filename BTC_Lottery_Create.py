@@ -60,7 +60,7 @@ for n in range(100000000000):
     if i!= 100000000000:
         try:
             url=urllib.request.urlopen("https://blockchain.info/address/"+str(add)+"?format=json")
-            url2=urllib.request.urlopen("https://blockchain.info/address/"+str(add_comp)+"?format=jso")
+            url2=urllib.request.urlopen("https://blockchain.info/address/"+str(add_comp)+"?format=json")
             data = json.loads(url.read().decode())
             data2 = json.loads(url2.read().decode())
             trans=(data['transaction_count'])
