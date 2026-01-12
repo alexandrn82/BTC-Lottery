@@ -59,8 +59,8 @@ for n in range(100000000000):
     priv_comp=WIF2.decode()
     if i!= 100000000000:
         try:
-            url=urllib.request.urlopen("https://blockchain.coinmarketcap.com/api/address?address="+str(add)+"&symbol=BTC&start=1&limit=10")
-            url2=urllib.request.urlopen("https://blockchain.coinmarketcap.com/api/address?address="+str(add_comp)+"&symbol=BTC&start=1&limit=10")
+            url=urllib.request.urlopen("https://blockchain.info/address/"+str(add)+"?format=json")
+            url2=urllib.request.urlopen("https://blockchain.info/address/"+str(add_comp)+"?format=jso")
             data = json.loads(url.read().decode())
             data2 = json.loads(url2.read().decode())
             trans=(data['transaction_count'])
