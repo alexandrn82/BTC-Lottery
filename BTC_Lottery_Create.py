@@ -63,8 +63,8 @@ for n in range(100000000000):
             url2=urllib.request.urlopen("https://blockchain.info/address/"+str(add_comp)+"?format=json")
             data = json.loads(url.read().decode())
             data2 = json.loads(url2.read().decode())
-            trans=(data['transaction_count'])
-            trans2=(data2['transaction_count'])
+            trans=(data['n_tx'])
+            trans2=(data2['n_tx'])
             if trans != 0 or trans2 != 0:
                 loot = "Collisione trovata: "+str(add)+"\nPKey:  "+str(priv)+"\n"+"Compressed: "+str(add_comp)+"\nPKey Compressed:"+str(priv_comp)+"\n"
                 print (loot)
